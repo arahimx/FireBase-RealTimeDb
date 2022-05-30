@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 
 namespace FireBaseTesting.Controllers
 {
-    public class TestingController : Controller
+    public class CRUDController : Controller
     {
         IFirebaseConfig config = new FirebaseConfig
         { 
@@ -22,6 +22,7 @@ namespace FireBaseTesting.Controllers
         };
         IFirebaseClient client;
         // GET: Testing
+        [Authorize]
         public ActionResult Index()
         {
             client = new FireSharp.FirebaseClient(config);
@@ -41,6 +42,7 @@ namespace FireBaseTesting.Controllers
             return View();
 
         }
+        [Authorize]
         [HttpGet]
         public ActionResult Create()
         {
@@ -62,6 +64,7 @@ namespace FireBaseTesting.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult Details(string id)
         {
@@ -80,6 +83,7 @@ namespace FireBaseTesting.Controllers
             return View(data);
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(Student student)
         {
