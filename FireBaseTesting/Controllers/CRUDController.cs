@@ -17,8 +17,8 @@ namespace FireBaseTesting.Controllers
     {
         IFirebaseConfig config = new FirebaseConfig
         { 
-            AuthSecret = "M04MvSSfSd2h4INoyCJzTEohxD3MbiEsBR0Edvcu",
-            BasePath = "https://causal-fort-313815-default-rtdb.firebaseio.com/"
+            AuthSecret = "Key here",
+            BasePath = "Path here/"
         };
         IFirebaseClient client;
         // GET: Testing
